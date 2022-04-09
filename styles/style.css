@@ -1,0 +1,36 @@
+body {
+  background-color: #ceb3b3;
+}
+
+body .title-container {
+  text-align: center;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+body .container-app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body .container-app input {
+  border-radius: 5px;
+  border: none;
+  background-color: #d7d7d7;
+  -webkit-box-shadow: 2px 2px 7px gray;
+          box-shadow: 2px 2px 7px gray;
+  margin: 0.4rem;
+  padding: .5rem;
+}
+
+body .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #3e3b3c;
+}
+/*# sourceMappingURL=style.css.map */

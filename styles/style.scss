@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(206, 179, 179);
+    .title-container {
+        text-align: center;
+        text-transform: uppercase;
+        color: rgb(48, 48, 48);
+    }
+    .container-app {
+        width: 100%;
+        margin: 0 auto;
+      
+
+        input {
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(215, 215, 215);
+            box-shadow: 2px 2px 7px gray;
+            margin: 0.4rem;
+            padding: .5rem;
+        }
+        
+    }
+    .content-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        color: rgb(62, 59, 60);
+    }
+}
