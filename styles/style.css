@@ -1,5 +1,11 @@
 body {
   background-color: #ceb3b3;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body .total-salary {
+  text-align: end;
+  margin-right: 1rem;
 }
 
 body .title-container {
@@ -23,14 +29,31 @@ body .container-app input {
   padding: .5rem;
 }
 
+body .container-app .btn-submit {
+  width: 2rem;
+  height: 2rem;
+  background-color: #d7d7d7;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 body .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 2rem;
   font-size: 1.4rem;
   color: #3e3b3c;
+}
+
+body .content-container .text-name, body .content-container .text-slr {
+  width: 50%;
+  text-align: center;
+  margin-bottom: .5rem;
 }
 /*# sourceMappingURL=style.css.map */
