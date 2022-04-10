@@ -1,58 +1,121 @@
-$base: rgb(40, 39, 39);
-$dark: black;
+$base: antiquewhite;
+$second: rgb(87, 87, 87);
 body {
-    box-sizing: border-box;
-    background: linear-gradient(rgb(219, 219, 219), $dark);
-    min-height: 100vh;
-    color: black;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(77, 70, 76),
+    rgb(212, 211, 212)
+  );
+  min-height: 100vh;
+  font-family: "Exo", sans-serif;
+  min-height: 100vh;
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+  ul, li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+   
+  }
+  .total-salary {
+    text-align: end;
+    margin-right: 1rem;
+  }
+  .title-container {
+    text-align: center;
+    text-transform: uppercase;
+    color: $base;
+  }
+  .container-app {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .form-data {
+      text-align: center;
+    }
 
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    .total-salary {
-       text-align: end;
-       margin-right: 1rem;
+    input {
+      border-radius: 5px;
+      border: none;
+      background-color: $base;
+      box-shadow: 2px 2px 7px gray;
+      margin: 0.4rem;
+      padding: 0.5rem;
     }
-    .title-container {
-        text-align: center;
-        text-transform: uppercase;
-        color: $base;
+
+    .btn-submit {
+      width: 2rem;
+      height: 2rem;
+      background-color: $base;
+      border: none;
+      border-radius: 50%;
+      color: $second;
+      cursor: pointer;
     }
-    .container-app {
-        width: 100%;
-        margin: 0 auto;
+  }
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: $base;
+
+    .text-name,
+    .text-slr {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid $base;
+      position: relative;
+    }
+    .trash {
+      position: absolute;
+      right: 2rem;
+      cursor: pointer;
+    }
+  }
+  
+  .menu {
+    color: $base;
+    border: none;
+  }
+    
+  .side-bar {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $base;
+    opacity: 0.95;
+    width: 40%;
+    transform: translate(-100%);
+    overflow: hidden;
+    transition: 1s;
+    text-transform: uppercase;
+
+    .close-btn {
+      margin: 1rem;
+      color: $second;
+    }
+    .side-list {
+      margin-top: 1rem;
+      line-height: 3;
+    }
+    .side-link {
+      color: $second;
       
-
-        input {
-            border-radius: 5px;
-            border: none;
-            background-color: rgb(215, 215, 215);
-            box-shadow: 2px 2px 7px gray;
-            margin: 0.4rem;
-            padding: .5rem;
-        }
-        .btn-submit {
-           width: 2rem;
-           height: 2rem;
-           background-color: rgb(215, 215, 215);
-           border: none;
-           border-radius: 50%;
-           cursor: pointer;
-            
-        }
-        
     }
-    .content-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 2rem;
-        font-size: 1.4rem;
-        color: $base;
-        
-        .text-name, .text-slr {
-            width: 47%;
-            text-align: center;
-            margin-bottom: .5rem;
-            border-bottom: 1px solid black;
-        }
-    }
+  }
+  .show{
+    transform: translate(0);
+    transition: 1s;
+  }
 }
+
+

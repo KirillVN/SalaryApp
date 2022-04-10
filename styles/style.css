@@ -1,11 +1,24 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(black));
-  background: linear-gradient(#dbdbdb, black);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4d464c), to(#d4d3d4));
+  background-image: linear-gradient(to right bottom, #4d464c, #d4d3d4);
   min-height: 100vh;
-  color: black;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Exo", sans-serif;
+  min-height: 100vh;
+}
+
+body button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+body ul, body li {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
 }
 
 body .total-salary {
@@ -16,30 +29,36 @@ body .total-salary {
 body .title-container {
   text-align: center;
   text-transform: uppercase;
-  color: #282727;
+  color: antiquewhite;
 }
 
 body .container-app {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
+}
+
+body .container-app .form-data {
+  text-align: center;
 }
 
 body .container-app input {
   border-radius: 5px;
   border: none;
-  background-color: #d7d7d7;
+  background-color: antiquewhite;
   -webkit-box-shadow: 2px 2px 7px gray;
           box-shadow: 2px 2px 7px gray;
   margin: 0.4rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 body .container-app .btn-submit {
   width: 2rem;
   height: 2rem;
-  background-color: #d7d7d7;
+  background-color: antiquewhite;
   border: none;
   border-radius: 50%;
+  color: #575757;
   cursor: pointer;
 }
 
@@ -49,17 +68,70 @@ body .content-container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 2rem;
   font-size: 1.4rem;
-  color: #282727;
+  color: antiquewhite;
 }
 
-body .content-container .text-name, body .content-container .text-slr {
-  width: 47%;
+body .content-container .text-name,
+body .content-container .text-slr {
+  width: 50%;
   text-align: center;
-  margin-bottom: .5rem;
-  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid antiquewhite;
+  position: relative;
+}
+
+body .content-container .trash {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+}
+
+body .menu {
+  color: antiquewhite;
+  border: none;
+}
+
+body .side-bar {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite;
+  opacity: 0.95;
+  width: 40%;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-transform: uppercase;
+}
+
+body .side-bar .close-btn {
+  margin: 1rem;
+  color: #575757;
+}
+
+body .side-bar .side-list {
+  margin-top: 1rem;
+  line-height: 3;
+}
+
+body .side-bar .side-link {
+  color: #575757;
+}
+
+body .show {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=style.css.map */
