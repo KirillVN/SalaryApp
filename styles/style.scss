@@ -80,7 +80,7 @@ body {
     flex: 1 1 100%;
     justify-content: space-around;
     margin-top: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: $base;
 
     .text-name,
@@ -92,7 +92,7 @@ body {
     }
     .trash {
       right: 2rem;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       float: right;
       cursor: pointer;
       color: rgb(184, 82, 82);
@@ -136,7 +136,29 @@ body {
     transform: translate(0);
     transition: 1s;
   }
+  // MAIN PAGE 
+  .main-container {
+    @extend .content-container;
+
+    text-align: center;
+    width: 80%;
+    
+    
+    .role-name {
+      margin: 0 auto 1rem;
+      width: 100%;
+      color: $base;
+      border-bottom: 1px solid $base;
+    }
+   
+  }
+  .total {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 }
+
 
 
 

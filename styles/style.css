@@ -76,7 +76,7 @@ body .container-app .btn-submit, body .container-app .btn-submit-main {
   cursor: pointer;
 }
 
-body .content-container {
+body .content-container, body .main-container {
   width: 90%;
   margin: 0 auto;
   -webkit-box-align: center;
@@ -93,21 +93,22 @@ body .content-container {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: antiquewhite;
 }
 
-body .content-container .text-name,
-body .content-container .text-slr {
+body .content-container .text-name, body .main-container .text-name,
+body .content-container .text-slr,
+body .main-container .text-slr {
   width: 50%;
   text-align: center;
   border-bottom: 1px solid antiquewhite;
   position: relative;
 }
 
-body .content-container .trash {
+body .content-container .trash, body .main-container .trash {
   right: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   float: right;
   cursor: pointer;
   color: #b85252;
@@ -153,5 +154,23 @@ body .show {
           transform: translate(0);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+body .main-container {
+  text-align: center;
+  width: 80%;
+}
+
+body .main-container .role-name {
+  margin: 0 auto 1rem;
+  width: 100%;
+  color: antiquewhite;
+  border-bottom: 1px solid antiquewhite;
+}
+
+body .total {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
