@@ -14,7 +14,7 @@ body {
 }
 
 body .wrapper {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -63,7 +63,7 @@ body .container-app input {
 }
 
 body .container-app .input-main {
-  width: 70%;
+  width: 85%;
 }
 
 body .container-app .btn-submit, body .container-app .btn-submit-main {
@@ -100,7 +100,7 @@ body .content-container, body .main-container {
 body .content-container .text-name, body .main-container .text-name,
 body .content-container .text-slr,
 body .main-container .text-slr {
-  width: 50%;
+  width: 45%;
   text-align: center;
   border-bottom: 1px solid antiquewhite;
   position: relative;
@@ -126,7 +126,7 @@ body .side-bar {
   left: 0;
   background-color: antiquewhite;
   opacity: 0.95;
-  width: 40%;
+  width: 50%;
   -webkit-transform: translate(-100%);
           transform: translate(-100%);
   overflow: hidden;
@@ -158,7 +158,7 @@ body .show {
 
 body .main-container {
   text-align: center;
-  width: 80%;
+  width: 90%;
 }
 
 body .main-container .role-name {
