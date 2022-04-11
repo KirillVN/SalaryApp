@@ -1,8 +1,11 @@
+
+
+
 const btnSbmtMain = document.querySelector(".btn-submit-main");
 const inputMain = document.querySelector(".input-main");
 const total = document.querySelector(".total");
 const mainContainer = document.querySelector(".main-container");
-
+const inputDate = document.querySelector('.date-input');
 btnSbmtMain.addEventListener("click", getInputMain);
 let roles = [];
 let arrList = [];
@@ -14,6 +17,7 @@ roles = JSON.parse(localStorage.getItem("info"));
 function getInputMain() {
   for (let role of roles) {
     if (inputMain.value === role.name) {
+      role.date = inputDate.value
       arrList.push(role);
       console.log(arrList);
       updateDataLocal();
@@ -23,12 +27,14 @@ function getInputMain() {
   updateTotal();
   calcTotal();
   inputMain.value = "";
+ 
 }
 
 function createTemplate(role, index) {
   return `
         <div class="role-name">
          <span class="text-role">${role.name}</span>
+         <span class="text-date">${role.date}</span>
          <button onclick="deleteTemplate(${index})" class="btn-remove-role trash">
            <i class="fa-solid fa-trash-can "></i>
          </button>
@@ -54,7 +60,6 @@ function deleteTemplate(index) {
   addTemplate();
   updateTotal();
 }
-
 function updateTotal() {
     calcTotal()
   total.innerHTML = `${totalPrice}&#x20bd`
@@ -68,3 +73,4 @@ function calcTotal() {
   }
   return totalPrice;
 }
+updateTotal()

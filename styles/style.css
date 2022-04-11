@@ -25,6 +25,9 @@ body button {
 
 body ul, body li {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 body a {
@@ -50,6 +53,13 @@ body .container-app {
 
 body .container-app .form-data {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .container-app input {
@@ -60,6 +70,12 @@ body .container-app input {
           box-shadow: 2px 2px 7px gray;
   margin: 0.4rem;
   padding: 0.5rem;
+}
+
+body .container-app .input-name, body .container-app .input-salary {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 body .container-app .input-main {
@@ -74,6 +90,7 @@ body .container-app .btn-submit, body .container-app .btn-submit-main {
   border-radius: 50%;
   color: #575757;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 body .content-container, body .main-container {
@@ -173,4 +190,6 @@ body .total {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-/*# sourceMappingURL=style.css.map */
+body .text-date {
+  font-size: 1rem;
+

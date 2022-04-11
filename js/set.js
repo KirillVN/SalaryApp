@@ -74,18 +74,3 @@ function deleteObj(index) {
  updateLocal()
  fillHtml()
 }
-
-
-
-
-// document.addEventListener('click', (event) => {
-
-// if(event.target.localName === btnsTrash.localName) {
-//   event.target
-//    data.pop()
-//   updateLocal();
-//    fillHtml();
-  //  
-// }
-  
-// })
