@@ -1,65 +1,73 @@
 
-const inputName = document.querySelector(".input-name");
-const inputSalary = document.querySelector(".input-salary");
-const btnSbmt = document.querySelector(".btn-submit");
-const content = document.querySelector(".content-container");
 
 
+const btnSbmtMain = document.querySelector(".btn-submit-main");
+const inputMain = document.querySelector(".input-main");
+const total = document.querySelector(".total");
+const mainContainer = document.querySelector(".main-container");
 
+btnSbmtMain.addEventListener("click", getInputMain);
+let roles = [];
+let arrList = [];
+!localStorage.roles
+  ? (arrList = [])
+  : (arrList = JSON.parse(localStorage.getItem("roles")));
+roles = JSON.parse(localStorage.getItem("info"));
 
-
-//SET AN ARRAY
-let data;
-// CHECK IF A LOCAL STORAGE IS NOT EMPTHY
-!localStorage.info
-  ? (data = [])
-  : (data = JSON.parse(localStorage.getItem("info")));
-
-btnSbmt.addEventListener("click", getInput);
-
-// GET DATA FROM INPUT
-function getInput(event) {
-  event.preventDefault();
-  createObj();
-  fillHtml();
-  updateLocal();
-  inputName.value = "";
-  inputSalary.value = "";
-}
-// CREATE and ADD INTO ARR
-function createObj() {
-  if (inputName.value && inputSalary.value) {
-    let obj = {
-      name: inputName.value,
-      price: inputSalary.value,
-    };
-    data.push(obj);
+function getInputMain() {
+  for (let role of roles) {
+    if (inputMain.value === role.name) {
+      arrList.push(role);
+      console.log(arrList);
+      updateDataLocal();
+    }
   }
+  addTemplate();
+  updateTotal();
+  calcTotal();
+  inputMain.value = "";
 }
 
-function updateLocal() {
-  localStorage.setItem("info", JSON.stringify(data));
-}
-//  CREATE TEMPLATE
-function createElement(obj, index) {
+function createTemplate(role, index) {
   return `
-  <div class="content-container">
-  <div class="text-name">${obj.name}</div>
-  <div class="text-slr">${obj.price}&#8381</div>
-  <button class="trash">
-   <i class="fa-solid fa-trash-can"></i>
-  </button>
-</div>
-        `;
+        <div class="role-name">
+         <span class="text-role">${role.name}</span>
+         <button onclick="deleteTemplate(${index})" class="btn-remove-role trash">
+           <i class="fa-solid fa-trash-can "></i>
+         </button>
+        </div>
+    `;
 }
-// FILL PAGE FROM ARR
-function fillHtml() {
-  content.innerHTML = "";
-  if (data.length > 0) {
-    data.forEach((role, index) => {
-      content.innerHTML += createElement(role, index);
-    });
-  }
-}
-fillHtml();
 
+function addTemplate() {
+  mainContainer.innerHTML = "";
+  arrList.forEach((role, index) => {
+    mainContainer.innerHTML += createTemplate(role, index);
+  });
+}
+addTemplate();
+
+function updateDataLocal() {
+  localStorage.setItem("roles", JSON.stringify(arrList));
+}
+
+function deleteTemplate(index) {
+  arrList.splice(index, 1);
+  updateDataLocal();
+  addTemplate();
+  updateTotal();
+}
+function updateTotal() {
+    calcTotal()
+  total.innerHTML = `${totalPrice}&#x20bd`
+}
+
+let totalPrice = 0;
+function calcTotal() {
+  totalPrice = 0;
+  for (let item of arrList) {
+    totalPrice += Number(item.price);
+  }
+  return totalPrice;
+}
+updateTotal()

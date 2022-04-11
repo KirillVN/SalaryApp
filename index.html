@@ -4,34 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./styles/style.css" />
+    
     <title>Salary App</title>
 </head>
 <body>
-    <div class="total-salary">0&#8381</div>
-    <div class="title-container">
-        <h1>Salary App</h1>
+    <button class="menu"><i class="fa-solid fa-bars fa-xl"></i></button>
+    <div class="wrapper">
+        <div class="title-container">
+            <h2>Salary App</h2>
+            <div class="total">0&#x20bd</div>
+        </div>
+        <div class="container-app">
+            <input type="text" name="text" class="input-main">
+            <button class="btn-submit-main">
+             <i class="fa-solid fa-circle-plus"></i>
+            </button>
+        </div>
+
+        <div class="main-container">
+           
+        </div>
+
+
+        <div class="side-bar">
+            <i class="fa-solid fa-xmark fa-xl close-btn"></i>
+            <ul class="side-list">
+                <li class="list-item"><a href="./index.html" class="side-link">Main Page</a></li>
+                <li class="list-item"><a href="./set.html" class="side-link">Set Data</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="container-app">
-        <form class="form-data">
-            <input name="name" type="text" class="input-name" placeholder="Role" required>
-            <input name="slr" type="number" class="input-salary" placeholder="Salary" required>
-            <button class="btn-submit"><i class="fa-solid fa-circle-plus"></i></button>
-        </form>
-    </div>
-
-    <div class="content-container">
-        <div class="text-name"></div>
-        <div class="text-slr"></div>
-    </div>
-    
 
 
 
 
 
 
+    <script src="./js/modal.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

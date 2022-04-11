@@ -1,51 +1,164 @@
-body {
-    background-color: rgb(206, 179, 179);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    .total-salary {
-       text-align: end;
-       margin-right: 1rem;
-    }
-    .title-container {
-        text-align: center;
-        text-transform: uppercase;
-        color: rgb(48, 48, 48);
-    }
-    .container-app {
-        width: 100%;
-        margin: 0 auto;
-      
-
-        input {
-            border-radius: 5px;
-            border: none;
-            background-color: rgb(215, 215, 215);
-            box-shadow: 2px 2px 7px gray;
-            margin: 0.4rem;
-            padding: .5rem;
-        }
-        .btn-submit {
-           width: 2rem;
-           height: 2rem;
-           background-color: rgb(215, 215, 215);
-           border: none;
-           border-radius: 50%;
-           cursor: pointer;
-            
-        }
-        
-    }
-    .content-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 2rem;
-        font-size: 1.4rem;
-        color: rgb(62, 59, 60);
-        
-        .text-name, .text-slr {
-            width: 50%;
-            text-align: center;
-            margin-bottom: .5rem;
-        }
-    }
+$base: antiquewhite;
+$second: rgb(87, 87, 87);
+* {
+  box-sizing: border-box;
 }
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(77, 70, 76),
+    rgb(212, 211, 212)
+  );
+  min-height: 100vh;
+  font-family: "Exo", sans-serif;
+  min-height: 100vh;
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+  ul, li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+   
+  }
+  .total-salary {
+    text-align: end;
+    margin-right: 1rem;
+  }
+  .title-container {
+    text-align: center;
+    text-transform: uppercase;
+    color: $base;
+  }
+  .container-app {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .form-data {
+      text-align: center;
+    }
+
+    input {
+      border-radius: 5px;
+      border: none;
+      background-color: $base;
+      box-shadow: 2px 2px 7px gray;
+      margin: 0.4rem;
+      padding: 0.5rem;
+    }
+    .input-main {
+      width: 70%;
+    }
+
+    .btn-submit {
+      width: 2rem;
+      height: 2rem;
+      background-color: $base;
+      border: none;
+      border-radius: 50%;
+      color: $second;
+      cursor: pointer;
+    }
+    .btn-submit-main {
+      @extend .btn-submit;
+
+    }
+  }
+  .content-container {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: $base;
+
+    .text-name,
+    .text-slr {
+      width: 50%;
+      text-align: center;
+      border-bottom: 1px solid $base;
+      position: relative;
+    }
+    .trash {
+      right: 2rem;
+      font-size: 1.2rem;
+      float: right;
+      cursor: pointer;
+      color: rgb(184, 82, 82);
+    }
+    
+
+  }
+  
+  .menu {
+    color: $base;
+    border: none;
+  }
+    
+  .side-bar {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $base;
+    opacity: 0.95;
+    width: 40%;
+    transform: translate(-100%);
+    overflow: hidden;
+    transition: 1s;
+    text-transform: uppercase;
+
+    .close-btn {
+      margin: 1rem;
+      color: $second;
+    }
+    .side-list {
+      margin-top: 1rem;
+      line-height: 3;
+    }
+    .side-link {
+      color: $second;
+      
+    }
+  }
+  .show{
+    transform: translate(0);
+    transition: 1s;
+  }
+  // MAIN PAGE 
+  .main-container {
+    @extend .content-container;
+
+    text-align: center;
+    width: 80%;
+    
+    
+    .role-name {
+      margin: 0 auto 1rem;
+      width: 100%;
+      color: $base;
+      border-bottom: 1px solid $base;
+    }
+   
+  }
+  .total {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
