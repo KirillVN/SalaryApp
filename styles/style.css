@@ -192,7 +192,7 @@ body .total {
 }
 body .text-date {
   font-size: 1rem;
-  
+}
   input[type="date"]::before { 
   content: attr(placeholder);
   width: 100%;
